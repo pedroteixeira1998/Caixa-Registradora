@@ -1,0 +1,36 @@
+.screen{
+    height: 100vh;
+    background-color: var(--back-ground);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    }
+
+.all{
+    border: 1px solid var(--principal-color);
+    background-color: var(--principal-color);
+    border-radius: 3px;
+    font-size: 30pt;
+    cursor: pointer;
+}
+
+.register{
+    padding: 15px;    
+}
+
+.sale{
+    padding: 15px 40px 15px 40px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--back-ground);
+}

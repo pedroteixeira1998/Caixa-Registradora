@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Signika+Negative:wght@400;700&display=swap');
+:root{
+    --principal-color: rgb(8, 175, 165);
+    --back-ground: rgb(232, 236, 239);
+}
+
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
+    margin: 0;
+    padding: 0;
+}

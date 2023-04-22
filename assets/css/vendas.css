@@ -1,0 +1,14 @@
+.body-page{
+    background-color: var(--back-ground);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    gap: 100px;
+}
+
+#product-sale{
+    width: 500px;
+    padding: 15px;
+}

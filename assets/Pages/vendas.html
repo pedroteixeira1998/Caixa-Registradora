@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/root.css">
     <link rel="stylesheet" href="/assets/css/vendas.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="/assets/JavaScript/vendas.js" defer></script>
     <title>Venda</title>
 </head>
@@ -44,17 +45,13 @@
                         <input type="number">
                     </div>
                     <div>
-                        <select name="" id="product-pay">
-                            <option value="">Forma de Pagamento</option>
-                        </select>
+                        <button>Adicionar Produto</button>
                     </div>
                 </form>
-                <div>
-                    <button>Adicionar Produto</button>
-                </div>
+                
             </div>
         </main>
-        <div>
+        <div class="right-page">
             <div>
                 <table id="product-add">
                     <tr>
@@ -63,15 +60,39 @@
                         <th class="tab">Preço</th>
                         <th class="tab">Excluir</th>
                     </tr>
+                    <tr>
+                        <td class="tab-left">1</td>
+                        <td class="tab-left">Produto 1</td>
+                        <td class="tab-right">R$ 10,00</td>
+                        <td class="tab-center"><span class="material-symbols-outlined">
+                            close
+                            </span></td>
+                    </tr>
+                    <tr>
+                        <td class="tab-left">2</td>
+                        <td class="tab-left">Produto 2</td>
+                        <td class="tab-right">R$ 20,00</td>
+                        <td class="tab-center"><span class="material-symbols-outlined">
+                            close
+                            </span></td>
+                    </tr>
                 </table>
-                <div>
-                    <h2>Total do Pedido</h2>
+            </div>
+            <div class="finalizar">
+                <div class="total">
+                    <h4>Total do Pedido</h4>
                     <span>R$27.000,00</span>
                 </div>
                 <div>
-                    <button>Cancelar</button>
-                    <button>Finalizar</button>
+                    <select name="" id="product-pay">
+                        <option value="">Forma de Pagamento</option>
+                    </select>
                 </div>
+                <div class="options">
+                    <button class="button cancel">Cancelar</button>
+                    <button class="button finish">Finalizar</button>
+                </div>
+            </div>
             </div>
         </div>
     </div>

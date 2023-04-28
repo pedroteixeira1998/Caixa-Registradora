@@ -30,9 +30,12 @@ main{
     gap: 30px; 
 }
 
-.form label{
-    display: none;
+.box{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
 }
+
 
 .form input{
     border-radius: 5px;
@@ -59,6 +62,18 @@ main{
     width: 200px;
     cursor: pointer;
     font-size: 13pt;
+}
+
+.preco-final{
+    border-radius: 5px;
+    display: flex;
+    padding: 20px;
+    border: 1px solid var(--principal-color);
+    background-color: white;
+    width: 300px;
+    gap: 10px;
+    align-items: center;
+
 }
 
 @media only screen and (max-device-width: 700px){

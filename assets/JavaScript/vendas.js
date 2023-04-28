@@ -1,5 +1,7 @@
 const produtosString = localStorage.getItem('Produtos');
 const select_produto = document.querySelector('#product-sale');
+const add = document.querySelector('.button-add');
+const table = document.querySelector('#product-add');
 
 const produtos = JSON.parse(produtosString);
 
@@ -31,5 +33,36 @@ select_produto.addEventListener('change', function(){
     total.value = (+quantidade.value * +produto.venda).toFixed(2);
     quantidade.addEventListener('input', function(){
         total.value = (+quantidade.value * +produto.venda).toFixed(2);
+    })
+})
+
+// Criar tabela com Produtos
+
+add.addEventListener('click', function(){
+    event.preventDefault();
+    produtos.forEach(produto =>{
+        const row = document.createElement('tr');
+        const cellQuant = document.createElement('td');
+        const cellNome = document.createElement('td');
+        const cellPreco = document.createElement('td');
+        const cellDel = document.createElement('td');
+        const icon = document.createElement('span');
+
+        cellQuant.value = produto.quantidade;
+        cellNome.textContent = produto.nome;
+        cellPreco.value = produto.total;
+        icon.textContent = "close"
+
+        cellQuant.classList.add('tab-left');
+        cellNome.classList.add('tab-left');
+        cellPreco.classList.add('tab-right');
+        cellDel.classList.add('tab-center');
+
+        row.appendChild(cellQuant);
+        row.appendChild(cellNome);
+        row.appendChild(cellPreco);
+        row.appendChild(cellDel);
+        cellDel.appendChild(icon);
+        table.appendChild(row);
     })
 })

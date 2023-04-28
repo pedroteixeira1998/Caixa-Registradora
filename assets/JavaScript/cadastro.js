@@ -47,7 +47,7 @@ cadastrar.addEventListener('click', function(){
     dadosMarcados.push(dados);
     console.log(dadosMarcados);
 
-    localStorage.setItem('Produtos', dadosMarcados);
+    localStorage.setItem('Produtos', JSON.stringify(dadosMarcados));
 
     inputs.forEach(input => {
         input.value = '';

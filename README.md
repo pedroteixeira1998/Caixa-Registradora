@@ -1,5 +1,7 @@
 # Sistema de vendas e estoque
 
+# Em construçao
+
 Sistema de gestão. Conta com área de cadastro de itens e página para realizar vendas.
 
 ## Descrição

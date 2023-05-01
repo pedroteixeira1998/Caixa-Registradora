@@ -68,17 +68,14 @@
     background-color: white;
     width: 300px;
     height: 430px;
-    box-shadow: 10px 10px 5px 1px rgba(0,0,0,0.14);
-    
-    
+    box-shadow: 10px 10px 5px 1px rgba(0,0,0,0.14);  
   }
 
 #product-add {
     width: 90%;
     border-collapse: collapse;
     font-size: 10pt;   
-    margin: 10px;
-    
+    margin: 10px;   
 }
 
 .tab {
@@ -115,7 +112,8 @@
 }
 
 .finalizar{
-    margin-top:60px;
+    position: fixed; 
+    top: 460px;
     display: flex;
     flex-direction: column;
     gap: 1px;

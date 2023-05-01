@@ -38,31 +38,33 @@ select_produto.addEventListener('change', function(){
 
 // Criar tabela com Produtos
 
-add.addEventListener('click', function(){
+add.addEventListener('click', function(event){
     event.preventDefault();
-    produtos.forEach(produto =>{
-        const row = document.createElement('tr');
-        const cellQuant = document.createElement('td');
-        const cellNome = document.createElement('td');
-        const cellPreco = document.createElement('td');
-        const cellDel = document.createElement('td');
-        const icon = document.createElement('span');
+    const nomeProduto = select_produto.value;
+    const produto = produtos.find(produto => produto.nome === nomeProduto);
 
-        cellQuant.value = produto.quantidade;
-        cellNome.textContent = produto.nome;
-        cellPreco.value = produto.total;
-        icon.textContent = "close"
+    const row = document.createElement('tr');
+    const cellQuant = document.createElement('td');
+    const cellNome = document.createElement('td');
+    const cellPreco = document.createElement('td');
+    const cellDel = document.createElement('td');
+    const icon = document.createElement('span');
 
-        cellQuant.classList.add('tab-left');
-        cellNome.classList.add('tab-left');
-        cellPreco.classList.add('tab-right');
-        cellDel.classList.add('tab-center');
+    cellQuant.textContent = document.querySelector('#quant').value;
+    cellNome.textContent = produto.nome;
+    cellPreco.textContent = document.querySelector('#total').value;
+    icon.textContent = "close"
 
-        row.appendChild(cellQuant);
-        row.appendChild(cellNome);
-        row.appendChild(cellPreco);
-        row.appendChild(cellDel);
-        cellDel.appendChild(icon);
-        table.appendChild(row);
-    })
+    cellQuant.classList.add('tab-left');
+    cellNome.classList.add('tab-left');
+    cellPreco.classList.add('tab-right');
+    cellDel.classList.add('tab-center');
+    icon.classList.add('material-symbols-outlined');
+
+    row.appendChild(cellQuant);
+    row.appendChild(cellNome);
+    row.appendChild(cellPreco);
+    row.appendChild(cellDel);
+    cellDel.appendChild(icon);
+    table.appendChild(row);
 })

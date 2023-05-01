@@ -75,7 +75,9 @@
     width: 90%;
     border-collapse: collapse;
     font-size: 10pt;   
-    margin: 10px;   
+    margin: 10px;  
+    max-height: 150px;
+    overflow-y: auto; 
 }
 
 .tab {
@@ -172,4 +174,9 @@
 .material-symbols-outlined{
     color: red;
     width: 1px;
+}
+
+.add-prod{
+    max-height: 170px;
+    overflow-y: auto;
 }

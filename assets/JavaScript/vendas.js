@@ -67,4 +67,8 @@ add.addEventListener('click', function(event){
     row.appendChild(cellDel);
     cellDel.appendChild(icon);
     table.appendChild(row);
-})
+
+    icon.addEventListener('click', function() {
+        table.removeChild(row);
+      });
+    });

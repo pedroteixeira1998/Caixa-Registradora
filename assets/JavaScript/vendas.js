@@ -36,6 +36,25 @@ select_produto.addEventListener('change', function(){
     })
 })
 
+const soma = () => {
+    const precos = document.querySelectorAll('.tab-right');
+    let total = 0;
+    for (let i = 0; i < precos.length; i++) {
+      total += parseFloat(precos[i].textContent);
+    }
+    document.querySelector('#total-geral').textContent = total.toFixed(2);
+  }
+
+  function atualizaTotal() {
+    const precos = document.querySelectorAll('.tab-right');
+    let total = 0;
+    for (let i = 0; i < precos.length; i++) {
+      total += parseFloat(precos[i].textContent);
+    }
+    document.querySelector('#total-geral').textContent = total.toFixed(2);
+  }
+  
+
 // Criar tabela com Produtos
 
 add.addEventListener('click', function(event){
@@ -68,7 +87,13 @@ add.addEventListener('click', function(event){
     cellDel.appendChild(icon);
     table.appendChild(row);
 
+
     icon.addEventListener('click', function() {
         table.removeChild(row);
+        atualizaTotal();
       });
+      soma()
+
     });
+
+

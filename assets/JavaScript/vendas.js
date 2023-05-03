@@ -62,6 +62,35 @@ const soma = () => {
 
 // Criar tabela com Produtos
 
+// criar elementos HTML
+const tr = document.createElement('tr');
+const th1 = document.createElement('th');
+const th2 = document.createElement('th');
+const th3 = document.createElement('th');
+const th4 = document.createElement('th');
+
+// adicionar classes
+th1.classList.add('tab');
+th2.classList.add('tab');
+th3.classList.add('tab');
+th4.classList.add('tab');
+
+// adicionar conteúdo
+th1.textContent = 'Qnt.';
+th2.textContent = 'Produto';
+th3.textContent = 'Preço';
+th4.textContent = 'Excluir';
+
+// adicionar elementos como filhos de outros elementos
+tr.appendChild(th1);
+tr.appendChild(th2);
+tr.appendChild(th3);
+tr.appendChild(th4);
+
+// adicionar o elemento tr ao seu HTML
+table.appendChild(tr);
+
+
 add.addEventListener('click', function(event){
     event.preventDefault();
     const nomeProduto = select_produto.value;

@@ -1,7 +1,7 @@
 const precodecusto = document.querySelector(".original-price");
 const precodevenda = document.querySelector(".sale-price");
 const precoFinalElement = document.querySelector('.preco-final');
-const cadastrar = document.querySelector('.form-button');
+
 
 // Cálculo valor do Lucro
 function somaprecofinal(){
@@ -16,7 +16,24 @@ function somaprecofinal(){
 
 let dadosMarcados = [];
 
+function createbutton(){
+    const div = document.createElement('div');
+    const but = document.createElement('button');
+    const main = document.querySelector('.main')
+
+    but.classList.add('form-button');
+    but.textContent = 'Cadastrar';
+
+    div.appendChild(but);
+    main.appendChild(div);
+}
+
+createbutton();
+
+const cadastrar = document.querySelector('.form-button');
+
 cadastrar.addEventListener('click', function(){
+    
     const name = document.querySelector('.name').value;
     const custo = precodecusto.value;
     const venda = precodevenda.value;
@@ -54,6 +71,8 @@ cadastrar.addEventListener('click', function(){
       });
     
 })
+
+
 
 
 

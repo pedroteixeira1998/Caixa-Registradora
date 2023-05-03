@@ -26,6 +26,8 @@ Trabalhei neste projetos com arrays, change, localStorage e diversas funções e
 
 ## Link
 
+https://pedroteixeira1998.github.io/Sistema-de-Vendas/
+
 ## Autor
 
 Linkedin: https://www.linkedin.com/in/pedro-teixeira-51a75b265/

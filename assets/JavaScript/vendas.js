@@ -2,6 +2,9 @@ const produtosString = localStorage.getItem('Produtos');
 const select_produto = document.querySelector('#product-sale');
 const add = document.querySelector('.button-add');
 const table = document.querySelector('#product-add');
+const cancelar = document.querySelector('#cancelar');
+const clean = document.querySelector('.form-sale');
+const finalizar = document.querySelector('.finish');
 
 const produtos = JSON.parse(produtosString);
 
@@ -19,6 +22,8 @@ nomesProdutos.forEach(nomeProduto => {
     option.value = nomeProduto;
     select_produto.add(option);
 })
+
+const itensAdicionados = [];
 
 select_produto.addEventListener('change', function(){
     const nomeProduto = select_produto.value;
@@ -87,6 +92,27 @@ add.addEventListener('click', function(event){
     cellDel.appendChild(icon);
     table.appendChild(row);
 
+    clean.reset();
+
+    const item = {
+      quantidade: cellQuant.textContent,
+      nome: cellNome.textContent,
+      preco: cellPreco.textContent
+    }
+
+    console.log(item)
+
+    function limparLista() {
+      itensAdicionados.length = 0;
+    }
+
+    finalizar.addEventListener('click', function(){
+      itensAdicionados.push(item);
+      console.log(itensAdicionados);
+    })
+
+
+
 
     icon.addEventListener('click', function() {
         table.removeChild(row);
@@ -96,4 +122,8 @@ add.addEventListener('click', function(event){
 
     });
 
+    cancelar.addEventListener('click', function() {
+      window.location.reload();
+        atualizaTotal();
+    });
 

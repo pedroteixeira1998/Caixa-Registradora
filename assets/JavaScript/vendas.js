@@ -131,13 +131,17 @@ add.addEventListener('click', function(event){
 
     console.log(item)
 
-    function limparLista() {
-      itensAdicionados.length = 0;
-    }
 
     finalizar.addEventListener('click', function(){
-      itensAdicionados.push(item);
-      console.log(itensAdicionados);
+      const pay = document.querySelector('#product-pay').value;
+      if( pay !== ''){
+        itensAdicionados.push(item);
+        console.log(itensAdicionados);
+        window.alert('Venda Concluida')
+        window.location.reload();
+      }
+
+      window.alert('Pagamento inválido')      
     })
 
 

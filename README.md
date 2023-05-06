@@ -4,6 +4,30 @@
 
 Sistema de gestão. Conta com área de cadastro de itens e página para realizar vendas.
 
+## Página Principal
+
+💰 Opção: Cadastro;
+
+💰 Opção: Venda.
+
+## Página Cadastro
+
+💰 Informações do Produto;
+
+💰 Salvar produto cadastrado no armazenamento do sistema.
+
+## página de vendas
+
+💰 Opções de produtos cadastrados;
+
+💰 Quantidade de produto individual;
+
+💰 Calculo de valor por produto e total da compra;
+
+💰 Opção para escolha de forma de pagamento;
+
+💰 Cancelar e Finalizar venda.
+
 ## Motivação:
 
 Trabalhei neste projetos com arrays, change, localStorage e diversas funções essenciais no JavaScript.

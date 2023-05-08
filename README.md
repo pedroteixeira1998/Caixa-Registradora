@@ -30,7 +30,7 @@ Sistema de gestão. Conta com área de cadastro de itens e página para realizar
 
 ## Motivação:
 
-Trabalhei neste projetos com arrays, change, localStorage e diversas funções essenciais no JavaScript.
+Neste projeto pude me propor a trabalhar com algo mais comercial e trabalhar o uso de funções essências no JavaScript, como arrays, localStorage e o uso do change.
 
 ## Desenvolvido com:
 
